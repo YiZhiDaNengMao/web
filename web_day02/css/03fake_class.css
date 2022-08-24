@@ -1,0 +1,19 @@
+a:link{
+	color: rgb(74, 177, 125);
+	text-decoration: none;
+	font-size: 36px;
+}
+a:visited{
+	color: hotpink;
+}
+a:hover{
+	color: rgb(119, 185, 211);
+}
+a:active{
+	color: red;
+}
+button{
+	border-radius: 7px;
+	text-shadow: 1px 1px 1px hotpink;
+	background-color: yellow;
+}

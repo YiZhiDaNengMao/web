@@ -1,0 +1,11 @@
+h1{
+    text-shadow: 2px 2px 2px #ff8987;
+}
+
+#reg_btn{
+    border-radius: 6px;
+    background-color: black;
+    color: white;
+    border-style: solid;
+    border-width: 3px;
+}

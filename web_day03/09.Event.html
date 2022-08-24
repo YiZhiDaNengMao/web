@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event</title>
+</head>
+<body>
+<!--方式一: 通过HTML标签中的事件属性进行绑定 => 内嵌式 -->
+<input type="button" onclick="on()" value="开灯"/>
+
+<!--方式二：通过DOM元素属性绑定 => 内联式-->
+<input type="button" id="on" value="开灯"/>
+<script>
+    //添加on()
+    function on() {
+        alert("被点中了！！")
+    }
+
+    var bto = document.getElementById("on")
+    bot.onclick = function () {
+        alert("被点中了！！")
+    }
+
+    <!--方式二优化-->
+    document.getElementById("on").onclick = function (){
+        alert("被点中了！！")
+    }
+</script>
+</body>
+</html>

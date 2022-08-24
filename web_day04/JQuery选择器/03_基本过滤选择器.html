@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>层级选择器</title>
+		<title>层级选择器</title>
+		<!--		引入CSS样式-->
+		<link href="../css/style.css" rel="stylesheet"/>
+		<!--		引入JQ库-->
+		<script src="../js/jquery-1.11.0.min.js"></script>
+		<script>
+			$(function () {
+
+				$("#btn1").click(function () {
+					$("div:first").css("background-color","#aee58f")
+				})
+
+				$("#btn2").click(function () {
+					$("div:last").css("background-color","#9de6e8")
+				})
+
+				// 索引值从 0 开始计数
+				$("#btn3").click(function () {
+					$("div:odd").css("background-color","#b896d8")
+				})
+
+				$("#btn4").click(function () {
+					$("div:even").css("background-color","#ff8987")
+				})
+			})
+		</script>
+		
+		
+	</head>
+	<body>
+		<input type="button" id="btn1" value="body中的第一个div元素"/>
+		<input type="button" id="btn2" value="body中的最后一个div元素"/>
+		<input type="button" id="btn3" value="选择body中的奇数的div"/>
+		<input type="button" id="btn4" value="选择body中的偶数的div"/>
+		
+		<hr/>
+		<div id="one">
+			<div class="mini">
+				111
+			</div>
+		</div>
+		
+		<div id="two">
+			<div class="mini">
+				222
+			</div>
+			<div class="mini">
+				333
+			</div>
+		</div>
+		
+		<div id="three">
+			<div class="mini">
+				444
+			</div>
+			<div class="mini">
+				555
+			</div>
+			<div class="mini">
+				666
+			</div>
+		</div>
+		
+		<span id="four">
+			
+		</span>
+	</body>
+</html>

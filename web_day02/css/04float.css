@@ -1,0 +1,30 @@
+li{
+    float: right;
+    /*clear: left;*/
+    list-style: none;
+    padding-right: 36px;
+}
+button{
+    border-radius: 6px;
+    background-color: transparent;
+    margin-top: 12px;
+
+    /*font-style: italic;*/
+    /*font-variant: all-small-caps;*/
+    /*font-weight: bold;*/
+    /*font-size: 36px;*/
+    /*font-family: "Microsoft JhengHei UI";*/
+    font: 20px "Microsoft JhengHei";
+}
+#sign_in{
+    border-style: none;
+    border-color: #c3307e;
+}
+#sign_up{
+    border-color: #c3307e;
+    border-style: solid;
+}
+a{
+    text-decoration: none;
+    color: #de50ce;
+}

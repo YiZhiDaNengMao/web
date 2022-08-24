@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>正则表达式</title>
+</head>
+<body>
+
+<script>
+  //获取正则对象的方式
+  /* 方式一：直接量方式：不需要加引号
+        var reg = /正则表达式/;
+     方式二：创建RegExp对象
+        var reg = new RegExp(“正则表达式");
+
+     需要使用的函数：test(str) => 判断指定字符串是否符合 规则
+
+     正则表达式的匹配规则：参照java中学习的正则表达式
+        ^ $ => 开始 结束
+        []：单个字符
+        \w : 单个字符
+        \d : [A-Za-z0-9_]
+         . : [0-9]
+
+        数量词:  +（至少一个）
+                *（0 或 n）
+                ？（1 或 n）
+   */
+
+  // 校验用户名的规则：单词字符 6 ~ 12
+  // 1.创建正则表达式对象，对正则表达式进行封装
+  var reg = /^\w{6,12}$/
+  var str = "666"
+  // 2.判断 str字符串是否符合reg 的规则
+  var flag = reg.test(str)
+  alert(flag)
+
+</script>
+</body>
+</html>

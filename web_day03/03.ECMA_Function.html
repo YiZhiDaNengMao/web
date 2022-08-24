@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Function</title>
+    <script>
+      //JS函数 - 没有访问修饰符、返回值类型
+      function f1(a,b){  //参数没有类型
+          console.log("a + b = " + (a+b));
+      }
+      //js函数没有重载概念，是直接进行覆盖
+      function f1(a,b,c){  //参数没有类型
+          console.log("a + b + c = " + (a+b+c));
+      }
+
+      f1(1,1);
+      // fun01(1); //少给了参数会出现的问题 -> a + b = NaN（Not a Number）
+      f1(1,1,1); //多给参数不影响
+
+      function f2(a,b){
+          console.log("a + b = " + (a + b));
+          return a + b;
+      }
+      var sum = f2(1,1);
+      console.log(sum);
+
+      var f3 = function (){
+          alert("第二种函数定义方法");
+      }
+      f3();
+    </script>
+</head>
+<body>
+
+</body>
+</html>

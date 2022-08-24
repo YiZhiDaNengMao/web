@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>组合器</title>
+		<style>
+			#div_root div{
+				border: 3px solid skyblue;
+			}
+			#div_root > div{
+				border: 2px solid red;
+				margin-top: 6px;
+			}
+			#div_root + div{
+				border: 2px solid lawngreen;
+				margin-top: 6px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="div_root">div_root
+			
+			<div id="div1">div1
+				<div id="div1.1">div1.1</div>
+				<span></span>
+				<span></span>
+			</div>
+			
+			<div id="div2">div2
+			</div>
+			
+			<div id="div3">div3
+			</div>
+		</div>
+		<div id="div4">div4</div>
+		<div id="div5">div5</div>
+	</body>
+</html>

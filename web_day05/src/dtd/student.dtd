@@ -1,0 +1,22 @@
+<!ELEMENT students (student*) >
+<!--ELEMENT：元素，通过元素定义标签-->
+<!--声明了一个根标签；标签的名字叫做 students
+    在这个students中可以存放student 子标签
+    * ：代表可以出现 0 或 多次，和正则表达式相同
+-->
+<!ELEMENT student (name,age,sex)>
+<!--代表student标签中可以出现的子标签
+    没有添加数量词符号，代表只能出现一次
+    并且需要按照顺序出现
+-->
+<!ELEMENT name (#PCDATA)>
+<!--代表 name 只能以字符串形式出现-->
+<!ELEMENT age (#PCDATA)>
+<!ELEMENT sex (#PCDATA)>
+<!ATTLIST student number ID #REQUIRED>
+<!--ATTLIST：用于定义属性-->
+<!--表示student标签有 属性
+    属性的名字：number
+    属性的类型：ID - 表示这个属性值是唯一的
+    #REQUIRED(required)：表示这个属性必须出现
+-->

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>使用jQuery完成表格隔行换色</title>
+		<link href="../css/style.css" rel="stylesheet"/>
+		<script src = "../js/jquery-1.11.0.min.js"></script>
+		<script>
+			$(function () {
+				/*1.修改奇数行和偶数行的颜色 - 自定义样式
+				$("tbody tr:odd").css("background-color", "#fdfd83")
+				$("tbody tr:even").css("background-color", "#ffd5c9")*/
+
+				$("tbody tr:odd").addClass("odd");
+				$("tbody tr:even").addClass("even");
+
+				//2.给tr添加事件
+				$("tbody tr").mouseover(function () {
+					// this -> JS对象
+					// this.setAttribute("color", this.style.background)
+					// 2.2将JS对象转换成JQ对象使用
+					// 2.3 先保留之前的颜色
+					$(this).attr("color", $(this).css("background-color"))
+					// 2.1设置颜色为其他颜色
+					$(this).css("background-color", "#ff8987")
+
+				})
+
+				$("tbody tr").mouseout(function () {
+					// 之前的写法
+					// var color = this.getAttribute("color")
+					var color = $(this).attr("color")
+					// 将之前的颜色恢复
+					$(this).css("background-color", color)
+				})
+			})
+		</script>
+
+	</head>
+
+	<body>
+		<table border="1" width="500" height="50" align="center" id="tbl" id="tbl">
+			<thead>
+				<tr>
+					<th>编号</th>
+					<th>姓名</th>
+					<th>年龄</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr >
+					<td>1</td>
+					<td>张三</td>
+					<td>22</td>
+				</tr>
+				<tr >
+					<td>2</td>
+					<td>李四</td>
+					<td>25</td>
+				</tr>
+				<tr >
+					<td>3</td>
+					<td>王五</td>
+					<td>27</td>
+				</tr>
+				<tr >
+					<td>4</td>
+					<td>赵六</td>
+					<td>29</td>
+				</tr>
+				<tr >
+					<td>5</td>
+					<td>田七</td>
+					<td>30</td>
+				</tr>
+				<tr >
+					<td>6</td>
+					<td>汾九</td>
+					<td>20</td>
+				</tr>
+			</tbody>
+		</table>
+	</body>
+</html>

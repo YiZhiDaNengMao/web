@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM_Element</title>
+</head>
+<body>
+    <!--
+        getElementById()：根据id属性值获取，返回单个对象
+        getElementByTagName()：根据标签名获取，返回对象数组
+        getElementByName()：根据name属性值获取，返回对象数组
+        getElementByClassname()：根据class属性获取值，返回对象数组
+    -->
+
+    <img id="bulb" src="img/bulb1.png"/>
+    <div class="cls">JS</div><br>
+    <div class="cls">Java</div><br>
+
+    <input type="checkbox" name="hobby" /> sing
+    <input type="checkbox" name="hobby" /> dance
+    <input type="checkbox" name="hobby" /> rap
+    <input type="checkbox" name="hobby" /> basketball
+    <script>
+        //根据id获取img对象
+        var img = document.getElementById("bulb")
+        alert(img)
+
+        //根据标签名获取 - 对象数组
+        var divs = document.getElementsByTagName("div")
+        // alert(divs.length)
+        for(let i = 0; i < divs.length; i++){
+            alert(divs[i])
+        }
+
+        //根据name获取
+        var hobs = document.getElementsByName("hobby")
+        for(let i = 0; i < hobs.length; i++){
+            alert(hobs[i])
+        }
+
+        //根据class后去
+        var cls = document.getElementsByClassName("cls")
+        for(let i = 0; i < cls.length; i++){
+            alert(cls[i])
+        }
+    </script>
+</body>
+</html>

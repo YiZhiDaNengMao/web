@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM_Element</title>
+</head>
+<body>
+<!--
+    getElementById()：根据id属性值获取，返回单个对象
+    getElementByTagName()：根据标签名获取，返回对象数组
+    getElementByName()：根据name属性值获取，返回对象数组
+    getElementByClassname()：根据class属性获取值，返回对象数组
+-->
+
+<img id="bulb" src="img/bulb1.png"/>
+<div class="cls">JS</div>
+<br>
+<div class="cls">Java</div>
+<br>
+
+<input type="checkbox" name="hobby"/> sing
+<input type="checkbox" name="hobby"/> dance
+<input type="checkbox" name="hobby"/> rap
+<input type="checkbox" name="hobby"/> basketball
+
+<script>
+
+    //修改所有div标签的标签体内容 -> 替换成 猪霸天！！！
+    var divs = document.getElementsByTagName("div");
+    /*
+        style：设置元素的CSS样式
+        innerHTML = innerText：设置元素内容
+     */
+    for (let i = 0; i < divs.length; i++) {
+        // 修改颜色
+        divs[i].style.color = "purple";
+        // 修改内容
+        divs[i].innerHTML = "猪霸天！！"
+    }
+
+    // 所有复选框变为选中状态 - checked
+    // 获取所有的复选框
+    var hobs = document.getElementsByName("hobby")
+    for(let i = 0; i < hobs.length; i++){
+        hobs[i].checked = "checked"
+    }
+</script>
+
+</body>
+</html>

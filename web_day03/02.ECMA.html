@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ECMA</title>
+
+    <!--<title> 中的 JavaScript-->
+    <script>
+        var a;
+        console.log(typeof a);
+        a = 1;
+        console.log(typeof a);
+        a = true;
+        console.log(typeof a);
+        a = new Date();
+        console.log(typeof a);
+
+        /*
+            js运算符
+            if - else
+            for
+            while
+         */
+        for(var i = 0; i < 7; i++){
+            console.log(i);
+        }
+
+        var b;
+        b = new Date();
+        // b = 1; //true
+        b = "1";  //true
+        if(b == 1){
+            console.log(true)
+        }else {
+            console.log(false)
+        }
+        /*
+            == : 判断的是内容，而不是类型
+            === : 比较内容 + 类型
+         */
+        // c = 1; //true
+        c = "1"; //false
+        if(c === 1){
+            console.log(true)
+        }else {
+            console.log(false)
+        }
+    </script>
+</head>
+<body>
+    <h1 id="dao">白</h1>
+    <button type="button" onclick="myFun()">颠倒黑白</button>
+
+    <!--<body> 中的 JavaScript-->
+    <!--提示：把脚本置于 body 元素的底部，可改善显示速度，因为脚本编译会拖慢显示。-->
+    <script>
+        function myFun(){
+            var dao = document.getElementById("dao").innerHTML;
+            if(dao == "白"){
+                document.getElementById("dao").innerHTML = "黑";
+            }else {
+                document.getElementById("dao").innerHTML = "白";
+            }
+        }
+    </script>
+</body>
+</html>

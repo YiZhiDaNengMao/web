@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JQ的循环遍历</title>
+    <script src="../js/jquery-1.11.0.min.js"></script>
+
+    <script>
+        $(function () {
+            /* 遍历数组 */
+            var arr = ["北京","上海","广州","深圳","杭州"]
+            /*each(callback) -> 全局函数
+                参数1: i 表示循环的下标
+                参数2: n 表示当前下标所对应的元素
+             */
+            $.each(arr,function (i, n){
+                console.log(i)
+                console.log(n)
+                console.log(this)
+            })
+
+            $("div").each(function (i){
+                console.log(i)
+                console.log(this)
+            })
+
+        })
+    </script>
+</head>
+<body>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+</body>
+</html>

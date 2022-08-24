@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<xsd:schema xmlns="http://www.zzxx.vip/xml"
+        xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://www.zzxx.vip/xml" elementFormDefault="qualified">
+
+    <!--element：定义了一个元素，名字叫做students
+        type：元素的类型是一个 自定义类型 studentType
+    -->
+    <xsd:element name="students" type="studentsType"/>
+
+    <!--自定义类型需要做一个声明：complexType
+        声明的名字叫做：studentsType
+    -->
+    <xsd:complexType name="studentsType">
+        <!--sequence：表示按照顺序出现 student元素 -->
+        <xsd:sequence>
+        <!--表示student元素是什么类型，type：”自定义类型"
+            minOccurs：最少出现0次
+            maxOccurs：最多出现粗疏，unbounded => 没有指定次数
+        -->
+            <xsd:element name="student" type="studentType" minOccurs="0" maxOccurs="unbounded"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="studentType">
+        <xsd:sequence>
+            <xsd:element name="name" type="xsd:string"/>
+            <xsd:element name="age" type="ageType" />
+            <xsd:element name="sex" type="sexType" />
+        </xsd:sequence>
+        <!--★ xxxType形式一般都为自定义类型 ★-->
+        <!--attribute：属性 name：名字 type：类型(numberType - 自定义类型)-->
+        <xsd:attribute name="number" type="numberType" use="required"/>
+    </xsd:complexType>
+    <xsd:simpleType name="sexType">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="male"/>
+            <xsd:enumeration value="female"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="ageType">
+        <xsd:restriction base="xsd:integer">
+            <xsd:minInclusive value="0"/>
+            <xsd:maxInclusive value="256"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="numberType">
+        <xsd:restriction base="xsd:string">
+            <xsd:pattern value="eee_\d{4}"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+</xsd:schema> 

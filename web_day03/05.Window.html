@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Window</title>
+    <script>
+        window.prompt("请输入智能灯泡管理账号：","###123456")
+        function turnOn(){
+            document.getElementById("bulb").src = "img/bulb2.png"
+        }
+        function turnOff(){
+            document.getElementById("bulb").src = "img/bulb1.png"
+        }
+        var count = 0;
+        setInterval(function () {
+            if(count % 2 === 0){
+                turnOn()
+            }else {
+                turnOff()
+            }
+            count++
+        },360)
+    </script>
+    <style>
+        input{
+            color: #ff8b8b;
+            background-color: #6bf8ff;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+<body>
+
+    <input type="button"  value="On"/>
+    <img id="bulb" src="img/bulb1.png"/>
+    <input type="button" value="Off"/>
+
+
+</body>
+</html>

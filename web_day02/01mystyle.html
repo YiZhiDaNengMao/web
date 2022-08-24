@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>div和span标签</title>
+		<!--内联式：
+			存放位置：head标签中
+			特点：可以在当前文件中多个标签应用
+		-->
+		<style>
+			#inrel{
+				background-color: lawngreen;
+				color: palevioletred;
+				text-shadow: 3px 3px 3px white;
+			}
+			span{
+				color: palevioletred;
+				text-shadow: 3px 3px 3px palevioletred;
+			}
+		</style>
+		
+		<link href="css/mystyle.css" rel="stylesheet" />
+	</head>
+	<body>
+		<!--内嵌式：
+			存放位置：在标签中添加style属性
+			特点：只对当前标签有效
+		-->
+		<div style="background-color: lightblue;color: yellow;text-shadow: 2px 2px 5px red;" >div标签(内嵌)</div>
+		
+		<div class="yellow">
+			<span id="span1">span1</span>
+			<span id="span2">span2</span>
+		</div>
+		
+		<!--外联式：使用link标签
+			属性：
+				href：引入的是在外不懈的CSS文件
+				rel：规定引入的是设呢类型的文件
+				stylesheet：样式表
+		-->
+		<div id="inrel">div标签(内联)</div>
+		<div id="outrel">div标签(外联)</div>
+		
+	</body>
+</html>

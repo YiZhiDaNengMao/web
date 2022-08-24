@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JQuery入门2</title>
+    <script src="../js/jquery-1.11.0.min.js"></script>
+    <script>
+        /*  对比JS 和 JQ 页面加载函数的区别
+            特点：JS中的页面加载函数只允许有一个，多个会被覆盖*/
+        /*onload = function () {
+            alert("load01")
+        }
+        onload = function () {
+            alert("load02")
+        }*/
+
+        /*  JQ 页面加载函数的引入方式
+            特点：JS页面加载函数允许有多个，按照顺序执行*/
+        $(function () {
+            alert("$01")
+        });
+        $(function () {
+            alert("$02")
+        })
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

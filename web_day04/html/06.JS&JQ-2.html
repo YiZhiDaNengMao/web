@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS和JQ对象使用上的区别</title>
+    <script src="../js/jquery-1.11.0.min.js"></script>
+    <style>
+        div{
+            border: 6px solid pink;
+            width: 360px;
+            height: 240px;
+            margin: 36px;
+        }
+    </style>
+  <script>
+    /*
+        问题：
+            JS对象 能不能使用JQ的函数 text()
+            JQ对象 能不能使用JS的属性 innerText
+     */
+    //JQ加载
+    $(function (){
+        //通过JS给div1设置内容
+        var div1 = document.getElementById("div1")
+        //JS => JQ
+        $(div1).text("JS => JQ")
+
+        //通过JQ给div2设置内容 => 选择器
+        $("#div2").get(0).innerText = "JQ => JS"
+    })
+  </script>
+</head>
+<body>
+<div id="div1">div1</div>
+<div id="div2">div2</div>
+
+</body>
+</html>

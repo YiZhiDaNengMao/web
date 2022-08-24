@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Array</title>
+    <script>
+        //定义空数组
+        var arr = [];
+        // var arr = new Array(0);
+        alert(arr.length);
+        //方式一
+        var arr1 = new Array(1,2,3);
+        alert(arr1);
+
+        //方式二
+        var arr2 = [4,5,6];
+        alert(arr2);
+
+        //访问
+        arr2[0] = 6;
+        alert(arr2)
+
+        /*  特点
+            java中的数组，长度不可变
+            js中的数组相当于java中的集合，长度可变
+         */
+        var arr3 = [6,6,6];
+        arr3[6] = 6;
+        alert(arr3[6]); //6
+        alert(arr3[5]); //undefined
+
+        arr3[4] = "bai";
+        alert(arr3[4]);
+
+        alert(arr3.constructor);
+        Array.prototype.print = function(){
+            for(let i = 0; i < this.length; i++) {
+                console.log(this[i]);
+            }
+        }
+        arr3.print();
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event</title>
+</head>
+<body>
+<!--onsubmit 表单提交事件-->
+<form id="form" action="#" method="get">
+    <input id="name" type="text" value="username"/>
+    <input id="mit" type="submit" value="提交"/>
+</form>
+
+
+<script>
+
+    document.getElementById("form").onsubmit = function (){
+        alert("提交成功！")
+        location.href = "https://www.baidu.com"
+        return false
+    }
+
+    // document.getElementById("name").onfocus = function () {
+    //     alert("得到焦点")
+    // }
+    // document.getElementById("name").onblur = function () {
+    //     alert("失去焦点")
+    // }
+
+    // document.getElementById("form").onmouseover = function () {
+    //     alert("鼠标经过")
+    // }
+
+
+</script>
+</body>
+</html>
