@@ -63,7 +63,7 @@
   function checkUsername() {
     let username = usernameInput.value.trim()
     let reg = /^\w{6,12}$/
-    let flag = reg.test(username)
+    let flag = reg.a_jdbc.JDBCDemo01(username)
     if(flag){
       document.getElementById("username_err").style.display = 'none'
     }else {
@@ -78,7 +78,7 @@
   function checkPassword() {
     let password = passwordInput.value.trim()
     let reg = /^\w{6,12}$/
-    let flag = reg.test(password)
+    let flag = reg.a_jdbc.JDBCDemo01(password)
     if(flag){
       document.getElementById("password_err").style.display = 'none'
     }else {
@@ -93,7 +93,7 @@
   function checkTel() {
     let tel = telInput.value.trim()
     let reg = /^\d{11}$/
-    let flag = reg.test(tel)
+    let flag = reg.a_jdbc.JDBCDemo01(tel)
     if(flag){
       document.getElementById("tel_err").style.display = 'none'
     }else {
