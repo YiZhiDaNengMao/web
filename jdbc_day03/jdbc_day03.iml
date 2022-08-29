@@ -28,5 +28,27 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/druid-1.1.16.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="commons-logging-1.2">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/commons-logging-1.2.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/spring-beans-4.3.21.RELEASE.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/spring-core-4.3.21.RELEASE.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/spring-jdbc-4.3.21.RELEASE.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/spring-tx-4.3.21.RELEASE.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
   </component>
 </module>
