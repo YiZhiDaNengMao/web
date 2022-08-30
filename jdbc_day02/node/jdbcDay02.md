@@ -1,7 +1,8 @@
 JDBC(Java DataBase Connectivity):Java数据库连接
 
 1.概念
-是一种用于执行SQL语句的java API,为多种关系型数据库提供统一访问的方式,它是由一组java接口和类组成.
+
+    是一种用于执行SQL语句的java API,为多种关系型数据库提供统一访问的方式,它是由一组java接口和类组成.
 
 2.数据库连接的三方: sun公司、数据库厂商、程序员
     
